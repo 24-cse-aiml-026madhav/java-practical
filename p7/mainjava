@@ -1,1 +1,28 @@
+class Demo {
+    // Constructor
+    Demo() {
+        System.out.println("Object is constructed.");
+    }
 
+    // Method to use the object
+    void display() {
+        System.out.println("Object is being used.");
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+
+        obj.display();
+
+        // Remove the reference
+        obj = null;
+
+        System.out.println("Reference removed.");
+
+        // Request garbage collection
+        System.gc();
+
+        System.out.println("Garbage collection requested.");
+    }
+}
